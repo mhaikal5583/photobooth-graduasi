@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photobooth Graduasi Form 5 2026</title>
+    <style>
+        :root {
+            --bg-dark: #0a0a14;
+            --panel-bg: rgba(22, 22, 38, 0.7);
+            --gold-primary: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.2);
+            --text-main: #ffffff;
+            --text-muted: #a0a0b8;
+            --border-color: rgba(212, 175, 55, 0.15);
+        }
+
+        * {
+            box-sizing: border-box;.
+
+            margin: 0;
+            padding: 0;
+            font-family: 'Cinzel', 'Segoe UI', serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #05050a 0%, #0d0d1a 50%, #150510 100%);
+            color: var(--text-main);
+            padding: 60px 20px;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Creative Premium Header Styling */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .header .badge-top {
+            background: linear-gradient(135deg, #2a2005 0%, #120e02 100%);
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-primary);
+            display: inline-block;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .header h1 {
+            color: var(--text-main);
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #ffffff 30%, #f3e5ab 70%, #d4af37 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .header-decor {
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+            margin: 20px auto 0 auto;
+        }
+
+        /* Glassmorphic Panel Cards */
+        .section-card {
+            background: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 35px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--gold-primary), transparent);
+        }
+
+        .section-title {
+            color: var(--gold-primary);
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Smart Two-Column Input Grid */
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 5px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 0.85rem;
+            color: #dfe6e9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+
+        label .required {
+            color: #ff4d4d;
+            margin-left: 4px;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background-color: rgba(10, 10, 20, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        input[type="file"] {
+            padding: 10px 14px;
+            cursor: pointer;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--gold-primary);
+            box-shadow: 0 0 12px var(--gold-glow);
+            background-color: rgba(15, 15, 30, 0.8);
+        }
+
+        input::placeholder, textarea::placeholder {
+            color: #555566;
+        }
+
+        /* Redesigned 3-Column Package Component Grid */
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .package-option {
+            background: rgba(15, 15, 25, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 30px 20px;
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .package-option:hover {
+            transform: translateY(-4px);
+            border-color: rgba(214, 175, 55, 0.4);
+        }
+
+        .package-option input[type="radio"] {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        /* Selected State Glow Effects */
+        .package-option:has(input[type="radio"]:checked) {
+            border-color: var(--gold-primary);
+            background-color: rgba(214, 175, 55, 0.04);
+            box-shadow: 0 10px 25px rgba(214, 175, 55, 0.1);
+        }
+
+        .package-header {
+            text-align: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            position: relative;
+        }
+
+        .package-name {
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--text-main);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+
+        .package-price {
+            color: var(--gold-primary);
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: -0.5px;
+        }
+
+        .package-features {
+            list-style: none;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .package-features li {
+            margin-bottom: 10px;
+            position: relative;
+            padding-left: 20px;
+            line-height: 1.4;
+        }
+
+        .package-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--gold-primary);
+            font-weight: bold;
+        }
+
+        .package-features .highlight {
+            color: var(--gold-primary);
+            font-weight: 600;
+        }
+
+        /* Modern Badges */
+        .badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #d4af37 0%, #aa841b 100%);
+            color: #000000;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(214, 175, 55, 0.3);
+            white-space: nowrap;
+        }
+
+        /* Elegant Grid Layout for QR Payments */
+        .qr-section-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .qr-card-wrapper {
+            background: rgba(10, 10, 15, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            transition: border-color 0.3s;
+        }
+
+        .qr-card-wrapper:hover {
+            border-color: rgba(214, 175, 55, 0.3);
+        }
+
+        .qr-box-inner {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 6px;
+            aspect-ratio: 1/1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .qr-box-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .qr-label-text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-top: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        /* Clean Bank Profile Box */
+        .bank-details-box {
+            background: linear-gradient(135deg, rgba(20, 20, 35, 0.8) 0%, rgba(12, 12, 22, 0.8) 100%);
+            border-left: 4px solid var(--gold-primary);
+            border-top: 1px solid rgba(255,255,255,0.04);
+            border-right: 1px solid rgba(255,255,255,0.04);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            border-radius: 0 10px 10px 0;
+            padding: 20px;
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .bank-meta-item span {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 4px;
+        }
+
+        .bank-meta-item p {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        /* Structured Row Options for Checkbox/Radios */
+        .radio-flex-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .custom-radio-card {
+            background: rgba(15, 15, 25, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 16px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+        }
+
+        .custom-radio-card input[type="radio"] {
+            margin-right: 12px;
+            accent-color: var(--gold-primary);
+            width: 18px;
+            height: 18px;
+        }
+
+        .custom-radio-card:has(input:checked) {
+            border-color: var(--gold-primary);
+            background: rgba(214, 175, 55, 0.04);
+        }
+
+        .payment-instruction {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 12px 16px;
+            border-radius: 6px;
+            border: 1px dashed rgba(255,255,255,0.08);
+        }
+
+        /* Premium Call-to-Action Button */
+        .submit-container {
+            margin-top: 40px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .submit-btn {
+            width: 100%;
+            max-width: 400px;
+            background: linear-gradient(135deg, #d4af37 0%, #b8901c 50%, #967117 100%);
+            color: #05050a;
+            border: none;
+            padding: 16px 40px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 40px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(214, 175, 55, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(214, 175, 55, 0.35);
+        }
+
+        .submit-btn:disabled {
+            background: #222230;
+            color: #555566;
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 800px) {
+            .packages-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            .qr-section-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .bank-details-box {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 40px 15px;
+            }
+            .section-card {
+                padding: 25px 20px;
+            }
+            .input-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            .radio-flex-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        
+        <div class="header">
+            <div class="badge-top">Eksklusif Form 5</div>
+            <h1>Photobooth Graduasi 2026</h1>
+            <p>Studio Photoshoot Background Bookshelf • Gambar siap dalam tempoh 7 hari bekerja • Softcopy dihantar terus melalui WhatsApp</p>
+            <div class="header-decor"></div>
+        </div>
+
+        <form id="googleSheetForm">
+
+            <div class="section-card">
+                <div class="section-title"> Maklumat Pelajar</div>
+                
+                <div class="input-grid">
+                    <div class="form-group">
+                        <label for="nama-pelajar">Nama Pelajar <span class="required">*</span></label>
+                        <input type="text" id="nama-pelajar" name="nama-pelajar" placeholder="Masukkan nama penuh" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nama-penjaga">Nama Penjaga <span class="required">*</span></label>
+                        <input type="text" id="nama-penjaga" name="nama-penjaga" placeholder="Masukkan nama penjaga" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="whatsapp">No. Telefon WhatsApp <span class="required">*</span></label>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="Contoh: 0123456789" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Alamat Emel <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="contoh@gmail.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="kelas">Kelas <span class="required">*</span></label>
+                        <input type="text" id="kelas" name="kelas" placeholder="Contoh: 5 Amanah" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ahli-keluarga">Bilangan Ahli Keluarga</label>
+                        <select id="ahli-keluarga" name="ahli-keluarga">
+                            <option value="Pelajar sahaja">Pelajar sahaja</option>
+                            <option value="2 Orang">2 Orang</option>
+                            <option value="3 Orang">3 Orang</option>
+                            <option value="4 Orang">4 Orang</option>
+                            <option value="5 Orang ke atas">5 Orang ke atas</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-title">Pilih Pakej Eksklusif</div>
+
+                <div class="packages-grid">
+                    <label class="package-option">
+                        <input type="radio" name="pakej" value="Package A (RM59)" checked required>
+                        <div class="package-header">
+                            <div class="package-name">Package A</div>
+                            <div class="package-price">RM59</div>
+                        </div>
+                        <ul class="package-features">
+                            <li>1 Pose (Individual / Family)</li>
+                            <li>Photo Touch Up</li>
+                            <li>Print 8RW (8" x 12") x 1pc</li>
+                            <li>Design Footer</li>
+                            <li>Softcopy via WhatsApp</li>
+                        </ul>
+                    </label>
+
+                    <label class="package-option">
+                        <div class="badge">Most Popular</div>
+                        <input type="radio" name="pakej" value="Package B (RM99)">
+                        <div class="package-header">
+                            <div class="package-name">Package B</div>
+                            <div class="package-price">RM99</div>
+                        </div>
+                        <ul class="package-features">
+                            <li>2 Pose (Individual / Family)</li>
+                            <li>Photo Touch Up</li>
+                            <li>Print 8RW (8" x 12") x 2pcs</li>
+                            <li>Design Footer</li>
+                            <li>Softcopy via WhatsApp</li>
+                        </ul>
+                    </label>
+
+                    <label class="package-option">
+                        <div class="badge">Best Value</div>
+                        <input type="radio" name="pakej" value="Package C (RM199)">
+                        <div class="package-header">
+                            <div class="package-name">Package C</div>
+                            <div class="package-price">RM199</div>
+                        </div>
+                        <ul class="package-features">
+                            <li>2 Pose (Individual / Family)</li>
+                            <li>Photo Touch Up</li>
+                            <li>Print 8RW (8" x 12") x 2pcs</li>
+                            <li>Wood Frame 8RW x 2pcs</li>
+                            <li class="highlight">FREE Print 4R x 2pcs</li>
+                            <li>Design Footer</li>
+                            <li>Softcopy via WhatsApp</li>
+                        </ul>
+                    </label>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-title">Maklumat Pembayaran</div>
+                <p style="font-size: 0.85rem; margin-bottom: 20px; color: var(--text-muted);">Imbas kod QR DuitNow pilihan anda atau lakukan pemindahan manual:</p>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 25px;">
+                    
+                    <div class="qr-card-wrapper">
+                        <div class="qr-box-inner">
+                            <img src="mae.jpeg" alt="Maybank QR">
+                        </div>
+                        <div class="qr-label-text">Maybank / MAE (Muhammad Haikal)</div>
+                    </div>
+
+                    <div class="qr-card-wrapper">
+                        <div class="qr-box-inner">
+                            <img src="islam.jpeg" alt="Bank Islam QR">
+                        </div>
+                        <div class="qr-label-text">Bank Islam (Muhammad Haikal)</div>
+                    </div>
+
+                    <div class="qr-card-wrapper">
+                        <div class="qr-box-inner">
+                            <img src="tng.jpeg" alt="Touch n Go QR">
+                        </div>
+                        <div class="qr-label-text">Touch n Go (Muhammad Haikal)</div>
+                    </div>
+
+                </div>
+
+                <div class="bank-details-box">
+                    <div class="bank-meta-item">
+                        <span>Nama Bank</span>
+                        <p>Maybank</p>
+                    </div>
+                    <div class="bank-meta-item">
+                        <span>Nama Akaun</span>
+                        <p>Muhammad Haikal</p>
+                    </div>
+                    <div class="bank-meta-item">
+                        <span>No. Akaun</span>
+                        <p style="color: var(--gold-primary); font-weight: 500;">1622 6375 4288</p>
+                    </div>
+                </div>
+
+                <div class="input-grid">
+                    <div class="form-group">
+                        <label for="nama-pembayar">Nama Pembayar</label>
+                        <input type="text" id="nama-pembayar" name="nama-pembayar" placeholder="Masukkan nama pembayar">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="resit">Muat Naik Resit Pembayaran <span class="required">*</span></label>
+                        <input type="file" id="resit" name="resit" accept="image/*,application/pdf" required>
+                    </div>
+                </div>
+
+                <p class="payment-instruction">Nota: Selepas menekan butang hantar di bawah, borang akan mengambil sedikit masa untuk memproses muat naik dokumen bukti pembayaran anda.</p>
+            </div>
+
+            <div class="section-card">
+                <div class="section-title">Kaedah Pengambilan</div>
+                <div class="radio-flex-row">
+                    <label class="custom-radio-card">
+                        <input type="radio" name="pengambilan" value="Ambil di sekolah" checked>
+                        Ambil di sekolah
+                    </label>
+                    <label class="custom-radio-card">
+                        <input type="radio" name="pengambilan" value="Ambil di kedai">
+                        Ambil di kedai
+                    </label>
+                    <label class="custom-radio-card">
+                        <input type="radio" name="pengambilan" value="Pos / Delivery">
+                        Pos / Delivery
+                    </label>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-title">Catatan Tambahan</div>
+                <div class="form-group">
+                    <textarea id="catatan" name="catatan" rows="4" placeholder="Contoh: Permohonan suntingan khas atau sebarang maklum balas tambahan kepada krew photoshoot."></textarea>
+                </div>
+            </div>
+
+            <div class="submit-container">
+                <button type="submit" class="submit-btn" id="submitBtn">Hantar Tempahan</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwSb87MeyHbXh_zhOW9B3llsy95vBkdCfHUflmddrKBL9CVka3TinlFklCAQYt4Gx1Z/exec';
+        const form = document.getElementById('googleSheetForm');
+        const btn = document.getElementById('submitBtn');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            btn.disabled = true;
+            btn.innerText = 'Memproses Fail & Data...';
+
+            const fileInput = document.getElementById('resit');
+            const file = fileInput.files[0];
+            
+            const formDataParameters = {};
+            new FormData(form).forEach((value, key) => {
+                if(key !== 'resit') formDataParameters[key] = value;
+            });
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const base64Data = event.target.result.split(',')[1];
+                    
+                    const payload = {
+                        fileBase64: base64Data,
+                        fileName: file.name,
+                        fileMimeType: file.type,
+                        parameters: formDataParameters
+                    };
+
+                    fetch(scriptURL, {
+                        method: 'POST',
+                        body: JSON.stringify(payload)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if(data.result === "success") {
+                            alert('Tempahan rasmi berjaya diproses! Sila semak peti masuk emel anda untuk salinan resit dokumen digital.');
+                            form.reset();
+                        } else {
+                            alert('Ralat pemprosesan sistem: ' + data.error);
+                        }
+                        btn.disabled = false;
+                        btn.innerText = 'Hantar Tempahan';
+                    })
+                    .catch(error => {
+                        alert('Ralat penghantaran! Semak konfigurasi Apps Script.');
+                        btn.disabled = false;
+                        btn.innerText = 'Hantar Tempahan';
+                        console.error('Error!', error);
+                    });
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert('Sila pilih fail resit pembayaran terlebih dahulu.');
+                btn.disabled = false;
+                btn.innerText = 'Hantar Tempahan';
+            }
+        });
+    </script>
+</body>
+</html>
